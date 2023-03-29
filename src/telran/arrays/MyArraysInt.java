@@ -55,4 +55,11 @@ public class MyArraysInt {
 		}
 		return res;
 	}
+	public static int[] insertNumberSorted(int [] array, int num) {
+		int index = Arrays.binarySearch(array, num);
+		if(index < 0) {
+			index = -index -1;
+		}
+		return insertNumber(array, index, num);
+	}
 }
